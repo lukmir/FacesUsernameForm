@@ -12,7 +12,7 @@
         <dependency>
             <groupId>javax.faces</groupId>
             <artifactId>javax.faces-api</artifactId>
-            <groupId>2.3</groupId>
+            <version>2.3</version>
         </dependency>
     </dependencies>
 
