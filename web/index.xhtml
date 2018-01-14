@@ -5,7 +5,30 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-   <f:view>
-      <h:outputLabel value="Hello, world"/>
-   </f:view>
+    <h:head>
+        <title>Enter user data</title>
+    </h:head>
+    <h:body>
+        <h:form id="userForm">
+            <h:messages/>
+            <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
+                <h:outputLabel for="firstNameInput" name="First name:">xxxx</h:outputLabel>
+                <h:inputText id="firstNameInput" label="First name" required="true" value="#{customer.firstName}">
+                    <f:validateLength minimum="2" maximum="30"></f:validateLength>
+                </h:inputText>
+
+                <h:outputLabel for="lastNameInput" name="Last name:"></h:outputLabel>
+                <h:inputText id="lastNameInput" label="Last name" required="true" value="#{customer.lastName}">
+                    <f:validateLength minimum="2" maximum="30"></f:validateLength>
+                </h:inputText>
+
+                <h:outputLabel for="emailInput" name="Email:"></h:outputLabel>
+                    <h:inputText id="emailInput" label="Email" required="true" value="#{customer.email}">
+                    <f:validateLength minimum="2" maximum="30"></f:validateLength>
+                </h:inputText>
+                <h:panelGroup></h:panelGroup>
+                <h:commandButton action="confirmForm" value="Save Form"></h:commandButton>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
 </html>
