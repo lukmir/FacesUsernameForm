@@ -12,22 +12,22 @@
         <h:form id="userForm">
             <h:messages/>
             <h:panelGrid columns="2" columnClasses="rightAlign,leftAlign">
-                <h:outputLabel for="firstNameInput" name="First name:">xxxx</h:outputLabel>
+                <h:outputLabel for="firstNameInput" name="First name">First name: </h:outputLabel>
                 <h:inputText id="firstNameInput" label="First name" required="true" value="#{customer.firstName}">
                     <f:validateLength minimum="2" maximum="30"></f:validateLength>
                 </h:inputText>
 
-                <h:outputLabel for="lastNameInput" name="Last name:"></h:outputLabel>
+                <h:outputLabel for="lastNameInput" name="Last name">Last name: </h:outputLabel>
                 <h:inputText id="lastNameInput" label="Last name" required="true" value="#{customer.lastName}">
                     <f:validateLength minimum="2" maximum="30"></f:validateLength>
                 </h:inputText>
 
-                <h:outputLabel for="emailInput" name="Email:"></h:outputLabel>
+                <h:outputLabel for="emailInput" name="Email">Email: </h:outputLabel>
                     <h:inputText id="emailInput" label="Email" required="true" value="#{customer.email}">
                     <f:validateLength minimum="2" maximum="30"></f:validateLength>
                 </h:inputText>
                 <h:panelGroup></h:panelGroup>
-                <h:commandButton action="confirmForm" value="Save Form"></h:commandButton>
+                <h:commandButton action="confirmation" value="Save Form"></h:commandButton>
             </h:panelGrid>
         </h:form>
     </h:body>
